@@ -1,23 +1,10 @@
 import React, { useState,useRef, useEffect } from 'react'
 import './testing_com.css'  
 import InputElement from './child_input';
+import ErrorMsg from './EmptyFieldError'
  
 
-const ErrorMsg=(props)=>{
-  if(props.error_msg_1===true){
-  return (
-       <div style={{color:"red",marginLeft:"10px",
-       textAlign:"center"}}>
-         Enter all Mandatory Fields
-       </div>
-  )
-  }
-  else{
-    return(
-      <div></div>
-    )
-  }
-}
+
 
 function validate_email_react(e,error_msg_2_ref){
   let email=e.target.value;
@@ -129,11 +116,11 @@ function sign_up_fun(e){
   //console.log(e.target);
   const data = new FormData(form_ref.current);
   const value = Object.fromEntries(data.entries());
-  console.log(data)
+  console.log(data);
   console.log(value);
 
   
-  if(inputref_1.current.value.length==0 || inputref_2.current.value.length==0 || inputref_3.current.value.length==0){
+  if(inputref_1.current.value.length===0 || inputref_2.current.value.length===0 || inputref_3.current.value.length===0){
     setErrorMsg(true);
     
 
@@ -141,7 +128,8 @@ function sign_up_fun(e){
   }
   else{
     setErrorMsg(false);
-    if(strong_password==true && special_charater==true && number_contain==true && capital_alphabet==true && password_length==true){
+    
+    if(strong_password===true && special_charater===true && number_contain===true && capital_alphabet===true && password_length===true && inputref_2.current.value===inputref_3.current.value){
       let action="https://reactjs.org/docs/dom-elements.html";
       form_ref.current.action=action;
       form_ref.current.submit();
@@ -153,7 +141,7 @@ function sign_up_fun(e){
 
 
 function confirm_password_fun(e){
-  if(inputref_2.current.value!=inputref_3.current.value){
+  if(inputref_2.current.value!==inputref_3.current.value){
     setConfirmPasswordError(true);
 
   }
