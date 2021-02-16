@@ -1,0 +1,105 @@
+html{
+	height: 100%;
+}
+#child_parent_1{
+    display: flex;
+    justify-content: center;
+}
+#child1{
+	position: absolute;
+
+	background-color:#C0C0C0;
+	top: 20%;
+	width: 40%;
+	
+	max-width: 400px;
+	min-width: 365px;
+	padding: 3%;
+	border-radius:10px;
+	display: flex;
+	flex-direction: column;
+
+}
+input{
+	border:none;
+	border:solid 1px black;
+	border-radius: 10px;
+	width:100%;
+	height:30px;
+    
+
+}
+input, select {
+   /* -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;*/
+            box-sizing: border-box;
+}
+form{
+	display: flex;
+	flex-direction: column;
+
+
+}
+.child12{
+	margin:10px;}
+.child123 input{
+	
+background-color: #5F9EA0;
+color:white;
+
+
+}
+
+body{
+	display: flex;
+	justify-content: center;
+	width:100%;
+	height:100%;
+	
+	background-image: url('./images/shahadat-rahman-BfrQnKBulYQ-unsplash.jpg');
+	background-position:center ;
+	background-size: cover;
+	background-repeat: no-repeat;
+    
+	overflow: visible;
+	
+}
+#error_msg_1{
+	margin-left:10px;
+	text-align:center;
+}
+
+@media screen and (max-width: 375px) {
+  
+  
+body{
+	width:375px;
+}
+
+   
+}
+
+@media screen and (max-width: 375px) {
+  
+  
+
+  #child1{
+  	width:375px;
+  	padding:0px;
+
+
+  }
+  
+   
+}
+
+@media screen and (max-width: 600px) {
+  
+  body{
+  	background-image: none;
+  	background-color: #e9e9e6;
+  }
+  
+  
+   
+}
