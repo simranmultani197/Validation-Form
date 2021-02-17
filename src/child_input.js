@@ -1,6 +1,7 @@
 import React, { useState,useRef, useEffect } from 'react'
 import AddError from './PasswordError'
 import Animator from './PasswordStrengthAnimator';
+import {Input} from './styleComponent';
 
 
 
@@ -43,7 +44,7 @@ const InputElement=(props)=>{
         }
     }
     let confirm_password_error;
-    if(props.confirm_password_error){
+    if(props.confirm_password_error ){
         confirm_password_error=<div style={{color:"red"}}>confirm password is not matching with password</div>
     }
     else{
@@ -55,7 +56,7 @@ const InputElement=(props)=>{
         <div>
         <div className={props.classname1} id={props.id1}>
 
-        <input className={props.classname2} id={props.id2} ref={props.ref2} onBlur={props.onblur} type={props.type2} placeholder={props.placeholder2} name={props.name2} value={props.value2} onChange={props.onchange} onClick={props.onclick} required/>
+        <Input className={props.classname2} id={props.id2} ref={props.ref2} onBlur={props.onblur} type={props.type2} placeholder={props.placeholder2} name={props.name2} value={props.value2} onChange={props.onchange} onClick={props.onclick} required/>
         <div id={props.id3} ref={props.ref3} >
 		{strong_password}
         {confirm_password_error}
